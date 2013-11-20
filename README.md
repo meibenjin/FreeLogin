@@ -7,7 +7,7 @@ How To Use?
 ---------
 Download python module pexpect
 ###
-    [pexpect download](https://pypi.python.org/pypi/pexpect/)<br />
+[pexpect download](https://pypi.python.org/pypi/pexpect/)
 Install pexpect module
 ###
     tar -xzvf pexpect-2.3.tar.gz
