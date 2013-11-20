@@ -4,7 +4,9 @@ FreeLogin
 a tool for setup passphraseless ssh(自动化配置SSH无密钥登录)
 
 How To Use?
-=========
+---------
+Download python module pexpect
+[pexpect download](https://pypi.python.org/pypi/pexpect/)<br />
 Install pexpect module
 ###
     tar -xzvf pexpect-2.3.tar.gz
