@@ -5,9 +5,8 @@ a tool for setup passphraseless ssh(自动化配置SSH无密钥登录)
 
 How To Use?
 ---------
-Download python module pexpect
+Download python module [pexpect](https://pypi.python.org/pypi/pexpect/)
 ###
-[pexpect download](https://pypi.python.org/pypi/pexpect/)
 Install pexpect module
 ###
     tar -xzvf pexpect-2.3.tar.gz
