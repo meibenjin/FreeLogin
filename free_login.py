@@ -4,18 +4,18 @@ import os
 import pexpect
 import sys
 
-file_path = sys.argv[1]
+ip_list = sys.argv[1]
 user_name = sys.argv[2]
 pwd = sys.argv[3]
-file = open(file_path,"r")
+file = open(ip_list,"r")
 lines = file.readlines()
 for line in lines:
     line = line.strip('\n')
     print "set free login on host:%s" % line
-    child = pexpect.spawn('ssh-copy-id -i /root/.ssh/id_rsa.pub ' + user_name + '@' + line)
+    child = pexpect.spawn('ssh-copy-id -i ${HOME}/.ssh/id_rsa.pub ' + user_name + '@' + line)
     message = ''
     try:
-        i = child.expect(['[Pp]assword:','continue connecting (yes/no?)'])
+        i = child.expect(['[Pp]assword:','continue connecting'])
         if i == 0:
             child.sendline(pwd)
         elif i == 1:
