@@ -4,6 +4,24 @@ import os
 import pexpect
 import sys
 
+# generate public key
+child = pexpect.spawn('ssh-key-gen -t rsa')
+message = ''
+try:
+    child.expect('save the key')
+    child.sendline('')
+    child.expect('[Ee]nter passphrase')
+    child.sendline('')
+    child.expect('[Ee]nter samepassphrase again')
+    child.sendline('')
+except pexpect.EOF:
+    message = child.read()
+    child.close()
+else:
+    message = child.read()
+    child.expect(pexpect.EOF)
+    child.close()
+
 ip_list = sys.argv[1]
 user_name = sys.argv[2]
 pwd = sys.argv[3]
